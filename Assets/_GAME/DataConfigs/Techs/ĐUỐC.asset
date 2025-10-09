@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "\u0110U\u1ED0C"
+  m_EditorClassIdentifier: 
+  id: 3
+  nameTech: "\u0110u\u1ED1c"
+  levelTech: 1
+  arr_material:
+  - id: 0
+    amount: 2
+  - id: 1
+    amount: 2
+  stat:
+    attack: 10
+    durability: 100
+    wear: 10
+    weight: 5
+  description: "C\u1EA7m \u0111u\u1ED1c tr\xEAn tay \u0111\u1EC3 l\xE0m s\xE1ng khu
+    v\u1EF1c xung quanh b\u1EA1n. C\u0169ng c\xF3 th\u1EC3 s\u1EED d\u1EE5ng \u0111\u1EC3
+    chi\u1EBFn \u0111\u1EA5u t\u1EA7m g\u1EA7n khi c\u1EA7n thi\u1EBFt."
+  workload: 5
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

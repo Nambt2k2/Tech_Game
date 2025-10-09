@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "V\u1EA2I"
+  m_EditorClassIdentifier: 
+  id: 14
+  nameTech: "V\u1EA3i"
+  levelTech: 3
+  arr_material:
+  - id: 4
+    amount: 2
+  stat:
+    attack: 0
+    durability: 0
+    wear: 0
+    weight: 1
+  description: "V\u1EA3i d\u1EC7t t\u1EEB len. C\u1EA7n thi\u1EBFt \u0111\u1EC3 t\u1EA1o
+    trang ph\u1EE5c."
+  workload: 5
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

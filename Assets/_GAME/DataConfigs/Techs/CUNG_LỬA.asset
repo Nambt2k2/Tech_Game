@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "CUNG_L\u1EECA"
+  m_EditorClassIdentifier: 
+  id: 22
+  nameTech: "Cung l\u1EEDa"
+  levelTech: 5
+  arr_material:
+  - id: 1
+    amount: 8
+  - id: 0
+    amount: 40
+  - id: 3
+    amount: 20
+  - id: 10
+    amount: 2
+  stat:
+    attack: 0
+    durability: 150
+    wear: 65
+    weight: 6
+  description: "M\u1ED9t c\xE2y cung g\xE2y s\xE1t th\u01B0\u01A1ng L\u1EEDa. S\u1EED
+    d\u1EE5ng v\u1EDBi Fire Arrow."
+  workload: 50
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

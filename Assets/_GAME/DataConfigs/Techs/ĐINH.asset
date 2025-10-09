@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "\u0110INH"
+  m_EditorClassIdentifier: 
+  id: 33
+  nameTech: "\u0110INH"
+  levelTech: 10
+  arr_material:
+  - id: 6
+    amount: 1
+  stat:
+    attack: 0
+    durability: 0
+    wear: 0
+    weight: 0
+  description: "C\u1EA7n thi\u1EBFt \u0111\u1EC3 x\xE2y d\u1EE5ng nhi\u1EC1u c\xF4ng
+    tr\xECnh kh\xE1c nhau. C\xF3 th\u1EC3 ch\u1EBF t\u1EA1o b\u1EB1ng B\xE0n l\xE0m
+    vi\u1EC7c nguy\xEAn thu\u1EF7."
+  workload: 30
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

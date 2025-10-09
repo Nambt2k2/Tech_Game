@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "TRANG_PH\u1EE4C_CH\u1ED0NG_N\u1EAENG_L\u1EECA"
+  m_EditorClassIdentifier: 
+  id: 28
+  nameTech: "Trang ph\u1EE5c ch\u1ED1ng n\xF3ng"
+  levelTech: 9
+  arr_material:
+  - id: 5
+    amount: 3
+  - id: 10
+    amount: 2
+  stat:
+    attack: 0
+    durability: 300
+    wear: 70
+    weight: 4
+  description: "M\u1ED9t b\u1ED9 trnag ph\u1EE5c v\u1EA3i \u0111\u01B0\u1EE3c s\u1EA3n
+    xu\u1EA5t \u1EDF v\xF9ng n\xF3ng. C\xF3 th\u1EC3 ch\u1ECBu \u0111\u01B0\u1EE3c
+    m\u1ED9t s\u1ED1 nhi\u1EC7t \u0111\u1ED9."
+  workload: 40
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

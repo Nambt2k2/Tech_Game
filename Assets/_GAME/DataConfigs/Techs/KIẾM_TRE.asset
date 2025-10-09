@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "KI\u1EBEM_TRE"
+  m_EditorClassIdentifier: 
+  id: 10
+  nameTech: "Ki\u1EBFm tre"
+  levelTech: 3
+  arr_material:
+  - id: 0
+    amount: 50
+  - id: 3
+    amount: 20
+  stat:
+    attack: 50
+    durability: 150
+    wear: 20
+    weight: 10
+  description: "M\u1ED9t thanh ki\u1EBFm c\xF3 kh\u1EA3 n\u0103ng c\u1EADn chi\u1EBFn
+    v\u1EDBi s\xE1t th\u01B0\u01A1ng l\u1EDBn nh\u01B0ng \u0111\u1ED9 b\u1EC1n kh\xF4ng
+    cao."
+  workload: 30
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "GI\u01AF\u1EDCNG_TRE"
+  m_EditorClassIdentifier: 
+  id: 12
+  nameTech: "Gi\u01B0\u1EDDng tre"
+  levelTech: 3
+  arr_material:
+  - id: 0
+    amount: 20
+  - id: 3
+    amount: 5
+  - id: 4
+    amount: 1
+  stat:
+    attack: 0
+    durability: 0
+    wear: 0
+    weight: 0
+  description: "Gi\u01B0\u1EDDng c\u1EE7a con ng\u01B0\u1EDDi. Ng\u1EE7 \u0111\u1EC3
+    h\u1ED3i ph\u1EE5c HP. Ng\u1EE7 v\xE0o ban \u0111\xEAm v\xE0 th\u1EDDi gian s\u1EBD
+    tr\xF4i qua cho \u0111\u1EBFn s\xE1ng. Kh\xF4ng th\u1EC3 ng\u1EE7 tr\u1EEB khi
+    \u0111\u01B0\u1EE3c x\xE2y d\u1EF1ng d\u01B0\u1EDBi m\u1ED9t m\xE1i nh\xE0"
+  workload: 20
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

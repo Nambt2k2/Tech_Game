@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "\u0110\u1ED2N_\u0110I\u1EC0N_TR\u1ED2NG_C\xC2Y_M\xC2M_X\xD4I"
+  m_EditorClassIdentifier: 
+  id: 19
+  nameTech: "\u0110\u1ED3n \u0111i\u1EC1n tr\u1ED3ng c\xE2y m\xE2m x\xF4i"
+  levelTech: 5
+  arr_material:
+  - id: 1
+    amount: 20
+  - id: 0
+    amount: 20
+  - id: 9
+    amount: 3
+  stat:
+    attack: 0
+    durability: 0
+    wear: 0
+    weight: 0
+  description: "M\u1ED9t trang tr\u1EA1i c\xF3 th\u1EC3 tr\u1ED3ng Qu\u1EA3 m\u1ECDng
+    \u0111\u1ECF. Th\u1EDDi gian thu ho\u1EA1ch nhanh, nh\u01B0ng \u0103n ch\xFAng
+    kh\xF4ng cung c\u1EA5p nhi\u1EC1u ch\u1EA5t dinh d\u01B0\u1EE1ng."
+  workload: 30
+  arr_typeAttribute: 010000000200000003000000
+  sprite: {fileID: 0}

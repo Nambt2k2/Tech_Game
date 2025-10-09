@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: CUNG_TRE
+  m_EditorClassIdentifier: 
+  id: 9
+  nameTech: Cung tre
+  levelTech: 3
+  arr_material:
+  - id: 0
+    amount: 30
+  - id: 1
+    amount: 5
+  - id: 3
+    amount: 15
+  stat:
+    attack: 30
+    durability: 150
+    wear: 15
+    weight: 6
+  description: "M\u1ED9t c\xE2y cung c\xF3 kh\u1EA3 n\u0103ng t\u1EA5n c\xF4ng t\u1EA7m
+    xa. N\u1EBFu l\u1EAFp r\xE1p v\u1ED9i v\xE0ng, n\xF3 kh\xF4ng m\u1EA1nh l\u1EAFm."
+  workload: 20
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

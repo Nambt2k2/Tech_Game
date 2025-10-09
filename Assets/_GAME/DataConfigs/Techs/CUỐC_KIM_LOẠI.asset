@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "CU\u1ED0C_KIM_LO\u1EA0I"
+  m_EditorClassIdentifier: 
+  id: 36
+  nameTech: "Cu\u1ED1c kim lo\u1EA1i"
+  levelTech: 11
+  arr_material:
+  - id: 0
+    amount: 20
+  - id: 1
+    amount: 16
+  - id: 6
+    amount: 5
+  stat:
+    attack: 40
+    durability: 250
+    wear: 30
+    weight: 0
+  description: "M\u1ED9t chi\u1EBFc cu\u1ED1c d\xF9ng trong khai th\xE1c m\u1ECF.
+    \u0110\u01B0\u1EE3c l\xE0m b\u1EB1ng kim lo\u1EA1i, \u0111\u1ED9 b\u1EC1n v\xE0
+    hi\xEAu qu\u1EA3 \u0111\xE3 \u0111\u01B0\u1EE3c c\u1EA3i thi\u1EC7n."
+  workload: 50
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

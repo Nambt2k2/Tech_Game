@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "L\xD5I_C\u0102N_C\u1EE8"
+  m_EditorClassIdentifier: 
+  id: 4
+  nameTech: "L\xF5i c\u0103n c\u1EE9"
+  levelTech: 2
+  arr_material:
+  - id: 0
+    amount: 8
+  - id: 1
+    amount: 3
+  - id: 2
+    amount: 1
+  stat:
+    attack: 0
+    durability: 0
+    wear: 0
+    weight: 0
+  description: "C\u01A1 s\u1EDF l\u01B0u tr\u1EEF Y\xEAu qu\xE1i b\u1ECB b\u1EAFt.
+    Y\xEAu qu\xE1i b\xEAn trong d\u1EA7n d\u1EA7n h\u1ED3i ph\u1EE5c HP. Khu v\u1EF1c
+    xung quanh c\u01A1 s\u1EDF n\xE0y tr\u1EDF th\xE0nh c\u0103n c\u1EE9."
+  workload: 10
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

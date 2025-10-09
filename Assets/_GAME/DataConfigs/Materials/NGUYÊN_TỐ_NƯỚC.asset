@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9862476b022781b48806f667f844aae4, type: 3}
   m_Name: "NGUY\xCAN_T\u1ED0_N\u01AF\u1EDAC"
   m_EditorClassIdentifier: 
-  e_name: 11
+  id: 11
+  nameMaterial: "Nguy\xEAn t\u1ED1 n\u01B0\u1EDBc"
   sprite: {fileID: 0}

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9862476b022781b48806f667f844aae4, type: 3}
   m_Name: PEG
   m_EditorClassIdentifier: 
-  e_name: 2
+  id: 2
+  nameMaterial: Peg
   sprite: {fileID: 0}

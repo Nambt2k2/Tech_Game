@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "B\xC0N_L\xC0M_VI\u1EC6C_CH\u1EA4T_L\u01AF\u1EE2NG_CAO"
+  m_EditorClassIdentifier: 
+  id: 37
+  nameTech: "B\xE0n l\xE0m vi\u1EC7c ch\u1EA5t l\u01B0\u1EE3ng cao"
+  levelTech: 11
+  arr_material:
+  - id: 0
+    amount: 50
+  - id: 8
+    amount: 10
+  - id: 6
+    amount: 15
+  stat:
+    attack: 0
+    durability: 0
+    wear: 0
+    weight: 0
+  description: "M\u1ED9t b\xE0n l\xE0m vi\u1EC7c ch\u1EA5t l\u01B0\u1EE3ng cao \u0111\u1EC3
+    s\u1EA3n xu\u1EA5t v\u1EADt ph\u1EA9m v\xE0 thi\u1EBFt b\u1ECB. Kh\xF4ng gian
+    l\xE0m vi\u1EC7c nh\u1ECF s\u1EBD h\u1EA1n ch\u1EBF t\u1ED1c \u0111\u1ED9 s\u1EA3n
+    xu\u1EA5t. C\u1EA7n m\u1ED9t ng\u01B0\u1EDDi b\u1EA1n \u0111\u1ED3ng h\xE0nh
+    c\xF3 th\u1EC3 l\xE0m vi\u1EC7c b\u1EB1ng tay."
+  workload: 30
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

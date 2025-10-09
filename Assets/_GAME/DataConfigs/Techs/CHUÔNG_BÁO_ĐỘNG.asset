@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "CHU\xD4NG_B\xC1O_\u0110\u1ED8NG"
+  m_EditorClassIdentifier: 
+  id: 17
+  nameTech: "Chu\xF4ng b\xE1o \u0111\u1ED9ng"
+  levelTech: 4
+  arr_material:
+  - id: 1
+    amount: 20
+  - id: 2
+    amount: 5
+  stat:
+    attack: 0
+    durability: 0
+    wear: 0
+    weight: 0
+  description: "Chu\xF4ng b\xE1o \u0111\u1ED9ng tr\u1EA1ng th\xE1i c\u1EA3nh b\xE1o
+    cho Qu\xE1i tr\xEAn c\u0103n c\u1EE9. C\xF3 th\u1EC3 t\u1EA5n c\xF4ng k\u1EBB
+    th\xF9 x\xE2m l\u01B0\u1EE3ng ho\u1EB7c t\u1EADp trung ho\xE0n to\xE0n v\xE0o
+    c\xF4ng vi\u1EC7c b\u1EA5t c\u1EE9 khi n\xE0o b\u1EA1n mu\u1ED1n."
+  workload: 30
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

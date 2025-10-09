@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "KHI\xCAN"
+  m_EditorClassIdentifier: 
+  id: 18
+  nameTech: "Khi\xEAn"
+  levelTech: 4
+  arr_material:
+  - id: 1
+    amount: 20
+  - id: 2
+    amount: 10
+  - id: 0
+    amount: 20
+  - id: 3
+    amount: 10
+  stat:
+    attack: 0
+    durability: 1000
+    wear: 0
+    weight: 5
+  description: "M\u1ED9t chi\u1EBFc khi\xEAn k\u1EF3 l\u1EA1 \u0111\u01B0\u1EE3c
+    ch\u1EBF t\u1EA1o b\u1EB1ng c\xF4ng ngh\u1EC7 Peg. N\xF3 t\u1EF1 \u0111\u1ED9ng
+    s\u1EEDa ch\u1EEFa khi kh\xF4ng b\u1ECB h\u01B0 h\u1EA1i sau 1 th\u1EDDi gian."
+  workload: 30
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}

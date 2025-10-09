@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "L\xD2_NUNG_NGUY\xCAN_THU\u1EF6"
+  m_EditorClassIdentifier: 
+  id: 32
+  nameTech: "L\xF2 nung nguy\xEAn thu\u1EF7"
+  levelTech: 10
+  arr_material:
+  - id: 0
+    amount: 20
+  - id: 1
+    amount: 50
+  - id: 10
+    amount: 3
+  stat:
+    attack: 0
+    durability: 0
+    wear: 0
+    weight: 0
+  description: "S\u1EED d\u1EE5ng Qu\u1EB7ng \u0111\u1EC3 s\u1EA3n xu\u1EA5t th\u1ECFi"
+  workload: 50
+  arr_typeAttribute: 07000000
+  sprite: {fileID: 0}

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "M\xC1Y_NGHI\u1EC0N"
+  m_EditorClassIdentifier: 
+  id: 27
+  nameTech: "M\xE1y nghi\u1EC1n"
+  levelTech: 8
+  arr_material:
+  - id: 1
+    amount: 20
+  - id: 0
+    amount: 52
+  - id: 2
+    amount: 10
+  stat:
+    attack: 0
+    durability: 0
+    wear: 0
+    weight: 0
+  description: "C\u01A1 s\u1EDF \u0111\u1EC3 ph\xE1 v\u1EE1 \u0110\xE1 v\xE0 G\u1ED7
+    \u0111\u1EC3 \u0111\xF4i l\u1EA5y v\u1EADt li\u1EC7u kh\xE1c. Y\xEAu c\u1EA7u
+    qu\xE1i c\xF3 \u0111\u1EB7c \u0111i\u1EC3m T\u01B0\u1EDBi n\u01B0\u1EDBc \u0111\u1EC3
+    quay tuabin n\u01B0\u1EDBc."
+  workload: 100
+  arr_typeAttribute: 02000000
+  sprite: {fileID: 0}

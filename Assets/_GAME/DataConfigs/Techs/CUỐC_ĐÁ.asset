@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
-  m_Name: TechDataConfig
+  m_Name: "CU\u1ED0C_\u0110\xC1"
   m_EditorClassIdentifier: 
-  e_name: 0
+  id: 2
+  nameTech: "Cu\u1ED1c \u0111\xE1"
   levelTech: 1
   arr_material:
-  - e_name: 0
-    amount: 2
+  - id: 0
+    amount: 5
+  - id: 1
+    amount: 5
   stat:
-    attack: 0
-    durability: 0
-    wear: 0
-    weight: 0
-  description: "B\xE0n l\xE0m vi\u1EC7c nguy\xEAn thu\u1EF7 \u0111\u1EC3 s\u1EA3n
-    xu\u1EA5t c\xE1c v\u1EADt ph\u1EA9m \u0111\u01A1n gi\u1EA3n."
+    attack: 20
+    durability: 100
+    wear: 20
+    weight: 10
+  description: "Khai th\xE1c \u0111\xE1 v\xE0 qu\u1EB7ng hi\u1EC7u qu\u1EA3."
   workload: 5
   arr_typeAttribute: 00000000
   sprite: {fileID: 0}

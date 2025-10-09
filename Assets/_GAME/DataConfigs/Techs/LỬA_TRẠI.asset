@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79068a4c6229f74797c8103c11eb157, type: 3}
+  m_Name: "L\u1EECA_TR\u1EA0I"
+  m_EditorClassIdentifier: 
+  id: 6
+  nameTech: "L\u1EEDa tr\u1EA1i"
+  levelTech: 2
+  arr_material:
+  - id: 0
+    amount: 10
+  stat:
+    attack: 2
+    durability: 0
+    wear: 0
+    weight: 0
+  description: "\u0110\u01B0\u1EE3c s\u1EED d\u1EE5ng \u0111\u1EC3 ch\u1EBF bi\u1EBFn
+    th\u1EE9c \u0103n \u0111\u01A1n gi\u1EA3n ho\u1EB7c cung c\u1EA5p h\u01A1i \u1EA5m
+    v\xE0 \xE1nh s\xE1ng \xEDt \u1ECFi."
+  workload: 10
+  arr_typeAttribute: 00000000
+  sprite: {fileID: 0}
