@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arr_building:
   - {fileID: 1036276745319021482, guid: 45df7e4a22ede7f49810ea79fec2307d, type: 3}
+  - {fileID: 1036276745319021482, guid: 2859b89c67f52f84b825da4b8da5a4f7, type: 3}

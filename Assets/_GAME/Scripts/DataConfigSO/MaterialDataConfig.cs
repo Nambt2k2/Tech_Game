@@ -15,4 +15,9 @@ public enum E_IDMaterial {
 public struct S_Material {
     public E_IDMaterial id;
     public int amount;
+
+    public S_Material(E_IDMaterial id, int amount) {
+        this.id = id;
+        this.amount = amount;
+    }
 }

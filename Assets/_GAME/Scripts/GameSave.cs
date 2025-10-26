@@ -14,6 +14,5 @@ public class GameSave {
         levelTech = 1;
         list_material = new List<S_Material>();
         list_tech = new List<S_Tech>();
-
     }
 }

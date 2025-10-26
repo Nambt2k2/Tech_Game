@@ -21,6 +21,13 @@ public struct S_Tech {
     public string timeStartBuilding;
     public Vector2 pos;
 
+    public S_Tech(E_IDTech id, E_StateTech state, string timeStartBuilding, Vector2 pos) {
+        this.id = id;
+        this.state = state;
+        this.timeStartBuilding = timeStartBuilding;
+        this.pos = pos;
+    }
+
     public TimeSpan GetTimeBuilding() {
         return DateTime.UtcNow - DateTime.Parse(timeStartBuilding);
     }

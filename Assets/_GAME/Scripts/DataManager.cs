@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DataManager : MonoBehaviour {
-    public static DataManager Ins;
+    public static DataManager ins;
     public bool isLoaded = false;
     public GameSave gameSave;
     public GameSave gameSave_BackUp;
@@ -12,8 +13,8 @@ public class DataManager : MonoBehaviour {
     void OnApplicationQuit() { SaveGame(); }
 
     void Awake() {
-        if (Ins == null)
-            Ins = this;
+        if (ins == null)
+            ins = this;
         LoadData();
     }
 
@@ -52,4 +53,62 @@ public class DataManager : MonoBehaviour {
         gameSave = new GameSave();
         gameSave.isNew = false;
     }
+
+    #region Building
+    public void SetLevelTech(int level) {
+        gameSave.levelTech = level;
+    }
+
+    public int SaveBuilding(S_Tech tech, int index = -1) {
+        if (index < 0 || index >= gameSave.list_tech.Count) {
+            gameSave.list_tech.Add(tech);
+            SaveGame();
+            return gameSave.list_tech.Count - 1;
+        }
+        gameSave.list_tech[index] = tech;
+        SaveGame();
+        return index;
+    }
+
+    public void LoadBuilding(AllBuildingDataConfig allBuildingDataConfig, Transform transformGrid) {
+        List<S_Tech> list_techClone = new List<S_Tech>(gameSave.list_tech);
+        if (list_techClone.Count == 0)
+            return;
+        for (int indexBuilding = 0; indexBuilding < allBuildingDataConfig.arr_building.Length; indexBuilding++)
+            for (int indexTech = list_techClone.Count - 1; indexTech >= 0; indexTech--)
+                if (list_techClone[indexTech].id == allBuildingDataConfig.arr_building[indexBuilding].techDataConfig.id) {
+                    allBuildingDataConfig.arr_building[indexBuilding].LoadBuilding(list_techClone[indexTech].pos, transformGrid, indexTech);
+                    list_techClone.RemoveAt(indexTech);
+                }
+    }
+    #endregion
+
+    #region Material
+    public bool CheckAmountMaterial(S_Material[] arr_material) {
+        for (int i = 0; i < arr_material.Length; i++)
+            if (arr_material[i].amount > GetAmountMaterial(arr_material[i].id))
+                return false;
+        return true;
+    }
+
+    public void SetAmountMaterial(E_IDMaterial id, int amount) {
+        bool isHave = false;
+        for (int i = 0; i < gameSave.list_material.Count; i++)
+            if (gameSave.list_material[i].id == id) {
+                gameSave.list_material[i] = new S_Material(id, gameSave.list_material[i].amount + amount);
+                isHave = true;
+                break;
+            }
+        if (!isHave)
+            gameSave.list_material.Add(new S_Material(id, amount));
+    }
+
+    public int GetAmountMaterial(E_IDMaterial id) {
+        for (int i = 0; i < gameSave.list_material.Count; i++)
+            if (gameSave.list_material[i].id == id) {
+                return gameSave.list_material[i].amount;
+            }
+        return 0;
+    }
+    #endregion
 }
