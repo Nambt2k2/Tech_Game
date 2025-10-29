@@ -71,14 +71,16 @@ public class DataManager : MonoBehaviour {
     }
 
     public void LoadBuilding(AllBuildingDataConfig allBuildingDataConfig, Transform transformGrid) {
-        List<S_Tech> list_techClone = new List<S_Tech>(gameSave.list_tech);
-        if (list_techClone.Count == 0)
+        if (gameSave.list_tech.Count == 0)
             return;
+        List<int> list_index = new List<int>();
+        for (int i = 0; i < gameSave.list_tech.Count; i++)
+            list_index.Add(i);
         for (int indexBuilding = 0; indexBuilding < allBuildingDataConfig.arr_building.Length; indexBuilding++)
-            for (int indexTech = list_techClone.Count - 1; indexTech >= 0; indexTech--)
-                if (list_techClone[indexTech].id == allBuildingDataConfig.arr_building[indexBuilding].techDataConfig.id) {
-                    allBuildingDataConfig.arr_building[indexBuilding].LoadBuilding(list_techClone[indexTech].pos, transformGrid, indexTech);
-                    list_techClone.RemoveAt(indexTech);
+            for (int index = list_index.Count - 1; index >= 0; index--)
+                if (gameSave.list_tech[list_index[index]].id == allBuildingDataConfig.arr_building[indexBuilding].techDataConfig.id) {
+                    allBuildingDataConfig.arr_building[indexBuilding].LoadBuilding(gameSave.list_tech[list_index[index]].pos, transformGrid, list_index[index]);
+                    list_index.RemoveAt(index);
                 }
     }
     #endregion

@@ -26,6 +26,13 @@ public struct S_Tech {
         this.timeCompletedBuilding = timeCompletedBuilding;
         this.pos = pos;
     }
+
+    public S_Tech(S_Tech tech) {
+        id = tech.id;
+        state = tech.state;
+        timeCompletedBuilding = tech.timeCompletedBuilding;
+        pos = tech.pos;
+    }
 }
 
 public enum E_StateTech {
