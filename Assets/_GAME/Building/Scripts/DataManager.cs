@@ -70,7 +70,7 @@ public class DataManager : MonoBehaviour {
         return index;
     }
 
-    public void LoadBuilding(AllBuildingDataConfig allBuildingDataConfig, Transform transformGrid) {
+    public void LoadBuilding(AllBuildingDataConfig allBuildingDataConfig, PlacementController placementController) {
         if (gameSave.list_tech.Count == 0)
             return;
         List<int> list_index = new List<int>();
@@ -79,9 +79,17 @@ public class DataManager : MonoBehaviour {
         for (int indexBuilding = 0; indexBuilding < allBuildingDataConfig.arr_building.Length; indexBuilding++)
             for (int index = list_index.Count - 1; index >= 0; index--)
                 if (gameSave.list_tech[list_index[index]].id == allBuildingDataConfig.arr_building[indexBuilding].techDataConfig.id) {
-                    allBuildingDataConfig.arr_building[indexBuilding].LoadBuilding(gameSave.list_tech[list_index[index]].pos, transformGrid, list_index[index]);
+                    allBuildingDataConfig.arr_building[indexBuilding].LoadBuilding(gameSave.list_tech[list_index[index]].pos, placementController, list_index[index]);
                     list_index.RemoveAt(index);
                 }
+    }
+
+    public void DestroyBuilding(int index) {
+        gameSave.list_tech.RemoveAt(index);
+    }
+
+    public E_StateTech GetStateBuilding(int index) {
+        return gameSave.list_tech[index].state;
     }
     #endregion
 

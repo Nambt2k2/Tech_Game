@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlacementController : MonoBehaviour {
@@ -6,7 +7,7 @@ public class PlacementController : MonoBehaviour {
     public E_StatePlacement statePlacement;
     public AllBuildingDataConfig allBuildingDataConfig;
     public Grid grid;
-    public LayerMask groundLayer;
+    public LayerMask groundLayer, buildingLayer;
     public string tagCheckBuilding, tagCheckGround;
     public Color colorPreviewCheckActive, colorPreviewCheckDeactive;
     public int orderLayerPreviewCheckActive, orderLayerPreviewCheckDeactive;
@@ -18,9 +19,10 @@ public class PlacementController : MonoBehaviour {
     Vector2[][] cachedPaths;
     bool isCacheValid = false;
     bool canBuild;
-    Building building;
+    Building buildingBuildCur;
     Vector3 mouseWorldPos, mouseWorldPosCheck;
     Vector3 offsetPreviewCheck;
+    public List<Building> list_buildingCur = new List<Building>();
     [Header("___________CAMERA")]
     public float speedMoveCam;
     Camera camMain;
@@ -33,10 +35,10 @@ public class PlacementController : MonoBehaviour {
         camMain = Camera.main;
         ResetPlacement();
         yield return new WaitUntil(() => DataManager.ins != null);
-        DataManager.ins.LoadBuilding(allBuildingDataConfig, grid.transform);
+        DataManager.ins.LoadBuilding(allBuildingDataConfig, this);
         yield return new WaitUntil(() => MainUI.ins != null);
         MainUI.ins.InitInputFieldLevelTech();
-        MainUI.ins.InitCheatMaterial();
+        MainUI.ins.InitUICheatMaterial();
     }
 
     void Update() {
@@ -55,8 +57,20 @@ public class PlacementController : MonoBehaviour {
                 preview.transform.position = mouseWorldPos;
                 // xây building tại vị đã check có thể build
                 if (Input.GetMouseButtonDown(0) && canBuild)
-                    if (!building.StartBuilding(mouseWorldPosCheck, grid.transform))
+                    if (!buildingBuildCur.StartBuilding(mouseWorldPosCheck, this))
                         CancelBuilding();
+                break;
+            case E_StatePlacement.None:
+                if (Input.GetMouseButtonDown(0)) {
+                    Collider2D hitCollider = Physics2D.OverlapPoint(camMain.ScreenToWorldPoint(Input.mousePosition), buildingLayer);
+                    if (hitCollider != null) {
+                        Building building = hitCollider.GetComponent<Building>();
+                        if (building != null) {
+                            statePlacement = E_StatePlacement.SelectBuilding;
+                            MainUI.ins.ShowUISelectBuilding(building.indexInData, () => DestroyBuilding(building));
+                        }
+                    }
+                }
                 break;
         }
     }
@@ -79,24 +93,36 @@ public class PlacementController : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag(tagCheckBuilding))
-            canBuild = false;
-        else if (collision.CompareTag(tagCheckGround))
-            canBuild = IsBoxCompletelyInsideComposite();
+        switch (statePlacement) {
+            case E_StatePlacement.MoveBuilding:
+                if (collision.CompareTag(tagCheckBuilding))
+                    canBuild = false;
+                else if (collision.CompareTag(tagCheckGround))
+                    canBuild = IsBoxCompletelyInsideComposite();
+                break;
+        }
     }
 
     void OnTriggerStay2D(Collider2D collision) {
-        if (collision.CompareTag(tagCheckBuilding))
-            canBuild = false;
-        else if (collision.CompareTag(tagCheckGround))
-            canBuild = IsBoxCompletelyInsideComposite();
+        switch (statePlacement) {
+            case E_StatePlacement.MoveBuilding:
+                if (collision.CompareTag(tagCheckBuilding))
+                    canBuild = false;
+                else if (collision.CompareTag(tagCheckGround))
+                    canBuild = IsBoxCompletelyInsideComposite();
+                break;
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision) {
-        if (collision.CompareTag(tagCheckBuilding))
-            canBuild = true;
-        else if (collision.CompareTag(tagCheckGround))
-            canBuild = false;
+        switch (statePlacement) {
+            case E_StatePlacement.MoveBuilding:
+                if (collision.CompareTag(tagCheckBuilding))
+                    canBuild = true;
+                else if (collision.CompareTag(tagCheckGround))
+                    canBuild = false;
+                break;
+        }
     }
 
     #region Check Placement Logic
@@ -214,13 +240,13 @@ public class PlacementController : MonoBehaviour {
         colli.enabled = false;
         preview.enabled = false;
         previewCheck.enabled = false;
-        building = null;
+        buildingBuildCur = null;
     }
     #endregion
 
     public void StartMoveBuilding(Building building) {
         statePlacement = E_StatePlacement.MoveBuilding;
-        this.building = building;
+        buildingBuildCur = building;
         colli.offset = building.colli.offset;
         colli.size = building.colli.size * multiSizeColliCheck;
         colli.enabled = true;
@@ -241,6 +267,17 @@ public class PlacementController : MonoBehaviour {
         MainUI.ins.HidePlacementUI();
     }
 
+    public void DestroyBuilding(Building building) {
+        // xử lý index của các building khác đang có trước khi xóa building
+        for (int i = 0; i < list_buildingCur.Count; i++)
+            if (list_buildingCur[i].indexInData > building.indexInData)
+                list_buildingCur[i].indexInData--;
+        list_buildingCur.Remove(building);
+        building.DestroyBuilding();
+        statePlacement = E_StatePlacement.None;
+        MainUI.ins.HideUISelectBuilding();
+    }
+
     public void MoveCam() {
         dirMoveCam = Vector3.zero;
         dirZoomCam = 0;
@@ -259,8 +296,12 @@ public class PlacementController : MonoBehaviour {
         camMain.transform.position = Vector3.Lerp(camMain.transform.position, camMain.transform.position + dirMoveCam.normalized, speedMoveCam * Time.deltaTime);
         camMain.orthographicSize = Mathf.Lerp(camMain.orthographicSize, camMain.orthographicSize + dirZoomCam, speedMoveCam * Time.deltaTime);
     }
+
+    public void ChangeState(E_StatePlacement state) {
+        statePlacement = state;
+    }
 }
 
 public enum E_StatePlacement {
-    None, MoveBuilding,
+    None, ShowBuilding ,MoveBuilding, SelectBuilding
 }

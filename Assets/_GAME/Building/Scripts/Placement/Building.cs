@@ -7,12 +7,12 @@ public class Building : MonoBehaviour {
     public TechDataConfig techDataConfig;
     public SpriteRenderer spriteRenderer;
     public BoxCollider2D colli;
-    int indexInData;
+    [HideInInspector] public int indexInData;
     public TextMeshPro tmp_timeBuilding;
     WaitForSeconds waitForSeconds;
 
     void Init() {
-        if (DataManager.ins.gameSave.list_tech[indexInData].state == E_StateTech.BUILDING) {
+        if (DataManager.ins.GetStateBuilding(indexInData) == E_StateTech.BUILDING) {
             if (GetTimeBuilding() <= 0)
                 CompleteBuilding();
             else {
@@ -25,21 +25,23 @@ public class Building : MonoBehaviour {
             tmp_timeBuilding.gameObject.SetActive(false);
     }
 
-    public void LoadBuilding(Vector3 pos, Transform parent, int index) {
-        Building building = Instantiate(this, pos, Quaternion.identity, parent);
+    public void LoadBuilding(Vector3 pos, PlacementController placementController, int index) {
+        Building building = Instantiate(this, pos, Quaternion.identity, placementController.grid.transform);
         building.indexInData = index;
         building.Init();
+        placementController.list_buildingCur.Add(building);
     }
 
-    public bool StartBuilding(Vector3 pos, Transform parent) {
+    public bool StartBuilding(Vector3 pos, PlacementController placementController) {
         if (DataManager.ins.CheckAmountMaterial(techDataConfig.arr_material)) {
             int index = DataManager.ins.SaveBuilding(new S_Tech(techDataConfig.id, E_StateTech.BUILDING, DateTime.UtcNow.AddSeconds(CalcTimeBuilding()).ToString(), pos));
             for (int i = 0; i < techDataConfig.arr_material.Length; i++)
                 DataManager.ins.SetAmountMaterial(techDataConfig.arr_material[i].id, -techDataConfig.arr_material[i].amount);
-            MainUI.ins.InitCheatMaterial();
-            Building building = Instantiate(this, pos, Quaternion.identity, parent);
+            MainUI.ins.InitUICheatMaterial();
+            Building building = Instantiate(this, pos, Quaternion.identity, placementController.grid.transform);
             building.indexInData = index;
             building.Init();
+            placementController.list_buildingCur.Add(building);
         }
         return DataManager.ins.CheckAmountMaterial(techDataConfig.arr_material);
     }
@@ -54,6 +56,7 @@ public class Building : MonoBehaviour {
         tech.state = E_StateTech.COMPLETED;
         DataManager.ins.SaveBuilding(tech, indexInData);
         tmp_timeBuilding.gameObject.SetActive(false);
+        MainUI.ins.ShowButtonCreateItemInBuilding();
     }
 
     public long GetTimeBuilding() {
@@ -81,5 +84,16 @@ public class Building : MonoBehaviour {
             yield return waitForSeconds;
             StartCoroutine(UpdateTimeBuilding());
         }
+    }
+
+    public void DestroyBuilding() {
+        Destroy(gameObject);
+        // khi hủy trả lại nguyên vật liệu khi xây dựng
+        for (int i = 0; i < techDataConfig.arr_material.Length; i++)
+            DataManager.ins.SetAmountMaterial(techDataConfig.arr_material[i].id, techDataConfig.arr_material[i].amount);
+        // trả thêm vật liệu đang chế tạo dở trong building nếu có
+        // xóa dữ liệu building khỏi data
+        DataManager.ins.DestroyBuilding(indexInData);
+        MainUI.ins.InitUICheatMaterial();
     }
 }
